@@ -1,5 +1,5 @@
 # BA_Assignment
-**LDA TOPIC model for Amazon product review "Patio, Lawn and Garden"**
+**LDA TOPIC model for Amazon product review "Patio, Lawn and Garden":**
 
 The following document consistes of an LDA topic model for the reviews of the Amazon product "Patio,Lawn and Garden".
 
@@ -109,4 +109,5 @@ json <- createJSON(phi = news_for_LDA$phi,
 serVis(json, out.dir = 'viz', open.browser = TRUE)
 ```
 
-
+**Result**
+https://cdn.rawgit.com/AshwinRajendran/BA_Assignment/master/index.html
