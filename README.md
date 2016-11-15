@@ -102,8 +102,5 @@ json <- createJSON(phi = news_for_LDA$phi,
                    term.frequency = news_for_LDA$term.frequency)
 serVis(json, out.dir = 'viz', open.browser = TRUE)
 ```
-
-
-
-[Click Here for the results] (https://cdn.rawgit.com/AshwinRajendran/BA_Assignment/master/index.html)
+https://cdn.rawgit.com/AshwinRajendran/BA_Assignment/master/index.html
 
