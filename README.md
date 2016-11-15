@@ -105,5 +105,5 @@ serVis(json, out.dir = 'viz', open.browser = TRUE)
 
 
 **#Result**
-[Click Here for the results](https://cdn.rawgit.com/AshwinRajendran/BA_Assignment/master/index.html)
+[Click Here for the results] (https://cdn.rawgit.com/AshwinRajendran/BA_Assignment/master/index.html)
 
