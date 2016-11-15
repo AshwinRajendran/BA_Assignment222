@@ -1,2 +1,3 @@
 # BA_Assignment
-http://127.0.0.1:4321/
+
+https://cdn.rawgit.com/AshwinRajendran/BA_Assignment/master/index.html
