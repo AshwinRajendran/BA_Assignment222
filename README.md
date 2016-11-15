@@ -3,9 +3,11 @@
 The following document consistes of an LDA topic model for the reviews of the Amazon product "Patio,Lawn and Garden".
 
 **DATA**
+
 There are a total of 151,254 reviews. We analyze the Text of the Review in this particular model.
 
 **Cleaning corpus**
+
 We remove punctuation and some common and some irrelevant stop words to get a fairly clean data set.
 
 ```
