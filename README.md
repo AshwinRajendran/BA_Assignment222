@@ -94,13 +94,13 @@ library(LDAvis)
 library(servr)
 ```
 # create the JSON object to feed the visualization:
-```
+
 json <- createJSON(phi = news_for_LDA$phi,
                    theta = news_for_LDA$theta,
                    doc.length = news_for_LDA$doc.length,
                    vocab = news_for_LDA$vocab,
                    term.frequency = news_for_LDA$term.frequency)
 serVis(json, out.dir = 'viz', open.browser = TRUE)
-```
-asdasd
+
+
 
