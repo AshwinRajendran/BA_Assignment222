@@ -109,5 +109,6 @@ json <- createJSON(phi = news_for_LDA$phi,
 serVis(json, out.dir = 'viz', open.browser = TRUE)
 ```
 
-**Result**
-https://cdn.rawgit.com/AshwinRajendran/BA_Assignment/master/index.html
+**Result:**
+
+[Click Here] (https://cdn.rawgit.com/AshwinRajendran/BA_Assignment/master/index.html)
