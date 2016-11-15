@@ -1,13 +1,13 @@
 # BA_Assignment
-# LDA TOPIC model for Amazon product review "Patio, Lawn and Garden"
+**LDA TOPIC model for Amazon product review "Patio, Lawn and Garden"**
 
 The following document consistes of an LDA topic model for the reviews of the Amazon product "Patio,Lawn and Garden".
 
-# Data
+**Data:**
 
 There are a total of 151,254 reviews. We analyze the Text of the Review in this particular model.
 
-# Cleaning corpus
+**Cleaning corpus:**
 
 We remove punctuation and some common and some irrelevant stop words to get a fairly clean data set.
 
@@ -49,7 +49,7 @@ get.terms <- function(x) {
 }
 documents <- lapply(doc.list, get.terms)
 ```
-# Compute some statistics related to the data set:
+**Compute some statistics related to the data set**
 D <- length(documents)  # number of documents (107)
 
 W <- length(vocab)  # number of terms in the vocab (1911)
@@ -59,7 +59,7 @@ doc.length <- sapply(documents, function(x) sum(x[2, ]))  # number of tokens per
 N <- sum(doc.length)  # total number of tokens in the data (56196)
 term.frequency <- as.integer(term.table)
 ```
-# MCMC and model tuning parameters:
+**MCMC and model tuning parameters:**
 
 K <- 10
 
@@ -69,7 +69,7 @@ alpha <- 0.02
 
 eta <- 0.02
 
-# Fit the model:
+**Fit the model:**
 ```
 library(lda)
 set.seed(357)
@@ -80,7 +80,7 @@ fit <- lda.collapsed.gibbs.sampler(documents = documents, K = K, vocab = vocab,
                                    compute.log.likelihood = TRUE)
 t2 <- Sys.time()
 ```
-## Display runtime
+**Display runtime:**
 
 The Time difference was 1.39 mins
 
@@ -99,7 +99,7 @@ library(LDAvis)
 library(servr)
 ```
 
-# Create the JSON object to feed the visualization:
+**Create the JSON object to feed the visualization:**
 ```
 json <- createJSON(phi = news_for_LDA$phi,
                    theta = news_for_LDA$theta,
