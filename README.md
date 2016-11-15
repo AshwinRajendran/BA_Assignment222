@@ -110,6 +110,9 @@ serVis(json, out.dir = 'viz', open.browser = TRUE)
 ```
 
 **Result:**
+
 It might be interesting to note that the Intertopic Distance between Topic 5 and Topic 7 with respect to the term market is non-existent whereas Topics 3&2 and 8&10 are correlated to a certain extent. 
+
 Click below to view the LDA Topic Modeling Visualization
+
 [Click Here] (https://cdn.rawgit.com/AshwinRajendran/BA_Assignment/master/index.html)
