@@ -51,11 +51,14 @@ documents <- lapply(doc.list, get.terms)
 ```
 # Compute some statistics related to the data set:
 D <- length(documents)  # number of documents (107)
+
 W <- length(vocab)  # number of terms in the vocab (1911)
+
+```
 doc.length <- sapply(documents, function(x) sum(x[2, ]))  # number of tokens per document [312, 288, 170, 436, 291, ...]
 N <- sum(doc.length)  # total number of tokens in the data (56196)
 term.frequency <- as.integer(term.table)
-
+```
 # MCMC and model tuning parameters:
 K <- 10
 G <- 3000
@@ -63,6 +66,7 @@ alpha <- 0.02
 eta <- 0.02
 
 # Fit the model:
+```
 library(lda)
 set.seed(357)
 t1 <- Sys.time()
@@ -71,8 +75,11 @@ fit <- lda.collapsed.gibbs.sampler(documents = documents, K = K, vocab = vocab,
                                    eta = eta, initial = NULL, burnin = 0,
                                    compute.log.likelihood = TRUE)
 t2 <- Sys.time()
+```
 ## display runtime
-t2 - t1
+
+The Time difference was 29.32397 secs
+```t2 - t1
 
 theta <- t(apply(fit$document_sums + alpha, 2, function(x) x/sum(x)))
 phi <- t(apply(t(fit$topics) + eta, 2, function(x) x/sum(x)))
@@ -85,17 +92,18 @@ news_for_LDA <- list(phi = phi,
 
 library(LDAvis)
 library(servr)
-
+```
 # create the JSON object to feed the visualization:
+```
 json <- createJSON(phi = news_for_LDA$phi,
                    theta = news_for_LDA$theta,
                    doc.length = news_for_LDA$doc.length,
                    vocab = news_for_LDA$vocab,
                    term.frequency = news_for_LDA$term.frequency)
 serVis(json, out.dir = 'viz', open.browser = TRUE)
-
-
-
 ```
-https://cdn.rawgit.com/AshwinRajendran/BA_Assignment/master/index.html
-```
+
+
+**#Result
+[Click Here for the results]**(https://cdn.rawgit.com/AshwinRajendran/BA_Assignment/master/index.html)
+
