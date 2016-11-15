@@ -4,6 +4,6 @@ The following document consistes of an LDA topic model for the reviews of the Am
 
 **DATA**
 There are a total of 151,254 reviews 
-```s
+```
 https://cdn.rawgit.com/AshwinRajendran/BA_Assignment/master/index.html
 ```
